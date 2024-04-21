@@ -61,7 +61,7 @@ button {
 <body>
 <h1>Isluc Sistemas </h1>
 
-<form class="row g-3 needs-validation" novalidate action="ServletLogin" method="post" >
+<form class="row g-3 needs-validation" novalidate action="<%=request.getContextPath() %>/ServletLogin" method="post" >
 <input type="hidden" value="<%= request.getParameter("url") %>" name="url">
 
 

@@ -47,6 +47,8 @@ String acao = request.getParameter("acao");
 				modelLogin.setSenha(senha);
 
 				if (daoLoginRepository.validarAutenticacao(modelLogin)) {
+					
+					request.getSession().setAttribute("usuario", modelLogin.getLogin());
 
 					if (url == null || url.equals("null")) {
 						url = "principal/principal.jsp";
