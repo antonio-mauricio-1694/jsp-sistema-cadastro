@@ -42,30 +42,37 @@
                                                    
                                                     <div class="card-block">
                                                         <h4 class="sub-title">Cadastro de Usuario</h4>
-                                        		           <form class="form-material" action="<%= request.getContextPath() %>/ServletUsuarioController">
+                                        		           <form class="form-material" action="<%= request.getContextPath() %>/ServletUsuarioController" method="post">
                                                             <div class="form-group form-default" >
-                                                                <input type="text" name="id" class="form-control" required="" readonly="readonly">
+                                                                <input type="text" name="id" id="id" class="form-control"  readonly="readonly" value="${modelLogin.id}">
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">id:</label>
                                                             </div>
                                                             
                                                              <div class="form-group form-default">
-                                                                <input type="text" name="nome" class="form-control" required="" value="">
+                                                                <input type="text" name="nome" id="nome" class="form-control" required="required" value="${modelLogin.nome}" >
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">Nome:</label>
                                                             </div>
+                                                            
+                                                         
                                                             <div class="form-group form-default">
-                                                                <input type="text" name="email" class="form-control" required="required" autocapitalize="of">
+                                                                <input type="text" name="email" id="email" class="form-control" required="required" autocapitalize="off" value="${modelLogin.email}">
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">E-mail:</label>
                                                             </div>
                                                             <div class="form-group form-default">
-                                                                <input type="password" name="senha" class="form-control" required="required" autocapitalize="of">
+                                                                <input type="text" name="login" id="login" class="form-control" required="required" autocapitalize="off" value="${modelLogin.login}">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">Login:</label>
+                                                            </div>
+                                                            <div class="form-group form-default">
+                                                                <input type="password" name="senha" id="senha" class="form-control" required="required" autocapitalize="off" value="${modelLogin.senha}">
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">Password:</label>
                                                             </div>
                       
-                                                             <button class="btn btn-primary waves-effect waves-light">Novo</button>
+                                                            	 <button class="btn btn-primary waves-effect waves-light">Novo</button>
 													            <button class="btn btn-success waves-effect waves-light">Salvar</button>
 													            <button class="btn btn-info waves-effect waves-light">Excluir</button>
                                                           </form>
